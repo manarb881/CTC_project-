@@ -27,8 +27,12 @@ CREATE TABLE performance (
 
 CREATE TABLE test_results (
     result_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    score FLOAT,
+    age INT,
+    score FLOAT CHECK (score BETWEEN 0 AND 10),
     response_time FLOAT,
+    YearsExperience INT,
+    gender VARCHAR(10),
+    user_id INT,
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
+
