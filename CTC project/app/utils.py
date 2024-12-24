@@ -12,7 +12,7 @@ def get_db_connection():
             connection = mysql.connector.connect(
               host="127.0.0.1",    
               user="root",    
-              password="2004manar", 
+              password="", 
               database="ctc5" ,
               port=3306,
               auth_plugin="mysql_native_password"
